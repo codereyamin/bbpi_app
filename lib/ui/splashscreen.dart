@@ -15,17 +15,7 @@ class Splashscreen extends StatefulWidget {
 class _SplashscreenState extends State<Splashscreen> {
   @override
   void initState() {
-   Timer(Duration(seconds: 10),(){
-     var config=false;
-     if(config==true){
-       Navigator.pushNamedAndRemoveUntil(context,  App_const.first, (route) => true);
-     }else{
-       config=true;
-       if(config==true){
-         Navigator.pushNamedAndRemoveUntil(context,  App_const.first, (route) => true);
-       }
-     }
-   });
+   Timer(Duration(seconds: 5),()=> Navigator.pushNamedAndRemoveUntil(context,  App_const.homepage, (route) => true));
     super.initState();
   }
   @override

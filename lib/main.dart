@@ -38,26 +38,31 @@ class _MyAppState extends State<MyApp> {
 
 
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({ Key? key }) : super(key: key);
+// class MyHomePage extends StatefulWidget {
+//   const MyHomePage({ Key? key }) : super(key: key);
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-bool condi =true;
-class _MyHomePageState extends State<MyHomePage> {
-  var agry_continu;
+//   @override
+//   State<MyHomePage> createState() => _MyHomePageState();
+// }
+// bool condi =true;
+// class _MyHomePageState extends State<MyHomePage> {
+//   static bool agry_continu =false;
 
-  @override
-  Widget build(BuildContext context) {
+//   @override
+//   Widget build(BuildContext context) {
   
    
-    return Scaffold(
-      //OnBoardingPage(),
-      body:agry_continu ? HomePage() : OnBoardingPage(),
-      
-    );
-  }
-}
+//     return Scaffold(
+//       body:agry_continu== false ? OnBoardingPage() : HomePage(),      
+     
+//     );
+//   }
+// }
 
+// //condition class
 
+// class _conditionValue{
+// static bool agry_continu =false;
+// _conditionValue conditionValueObj =new _conditionValue();
+
+// }

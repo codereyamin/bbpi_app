@@ -8,7 +8,7 @@ class App_routs{
 
 
   static final routes = {
-    App_const.first:(context)=> MyHomePage(),
+   // App_const.first:(context)=> MyHomePage(),
     App_const.homepage:(context)=> HomePage(),
     App_const.splashscreen:(context)=> Splashscreen(),
 
