@@ -1,8 +1,7 @@
 
 import 'dart:async';
 import 'dart:ui';
-import 'package:bbpi_app/const/app_const.dart';
-import 'package:bbpi_app/routs/app_routs.dart';
+import 'package:bbpi_app/page/home_page.dart';
 import 'package:flutter/material.dart';
 
 class Splashscreen extends StatefulWidget {
@@ -15,7 +14,7 @@ class Splashscreen extends StatefulWidget {
 class _SplashscreenState extends State<Splashscreen> {
   @override
   void initState() {
-   Timer(Duration(seconds: 5),()=> Navigator.pushNamedAndRemoveUntil(context,  App_const.homepage, (route) => true));
+   Timer(const Duration(seconds: 3),()=> Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomePage())));
     super.initState();
   }
   @override
@@ -28,7 +27,7 @@ class _SplashscreenState extends State<Splashscreen> {
         child: Stack(
           fit: StackFit.expand,
           children: [
-            ImageFiltered(imageFilter: ImageFilter.blur(sigmaX: 3,sigmaY: 2),
+            ImageFiltered(imageFilter: ImageFilter.blur(sigmaX: 0.5,sigmaY: 1.5),
             child: Image.asset('assets/bbpi.jpg',fit: BoxFit.contain,),
             ),
       SafeArea(
@@ -36,7 +35,7 @@ class _SplashscreenState extends State<Splashscreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
+            children:const [
 
               Text('WelCome To',style: TextStyle(fontSize: 44.0,fontWeight: FontWeight.bold,color: Colors.blue),),
                SizedBox(height: 20.0,),
@@ -44,7 +43,7 @@ class _SplashscreenState extends State<Splashscreen> {
               SizedBox(height: 20.0,),
               Text('Polytechnic Institue',style: TextStyle(fontSize: 30.0,fontWeight: FontWeight.bold,color: Colors.blue),),
               SizedBox(height: 20.0,),
-              CircularProgressIndicator(color: Colors.red,),
+              CircularProgressIndicator(color: Colors.red, strokeWidth: 8.0,),
             ],
           ),
         ),

@@ -1,12 +1,10 @@
 
-import 'dart:ui';
-
 import 'package:bbpi_app/const/app_const.dart';
-import 'package:bbpi_app/main.dart';
 import 'package:bbpi_app/page/home_page.dart';
-import 'package:bbpi_app/routs/app_routs.dart';
+import 'package:bbpi_app/page/termsCondition.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class OnBoardingPage extends StatefulWidget {
   
@@ -18,10 +16,9 @@ class OnBoardingPage extends StatefulWidget {
 
 class _OnBoardingPageState extends State<OnBoardingPage> {
   bool agry=false;
-  bool show_Next_Button=true;
+  bool  show_Next_Button=true;
   bool show_Done_Button=false;
- static bool agry_continu=false;
-
+ 
 
   @override
  Widget build(BuildContext context) => SafeArea(
@@ -47,21 +44,21 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+              children:const [
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 5),
+                  padding:  EdgeInsets.only(bottom: 5),
                   child: Text('* Staying with classmates',style: TextStyle(fontWeight: FontWeight.bold)),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 5),
+                  padding:EdgeInsets.only(bottom: 5),
                   child: Text('* Texting',style: TextStyle(fontWeight: FontWeight.bold)),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 5),
+                  padding: EdgeInsets.only(bottom: 5),
                   child: Text('* Making New Classmates',style: TextStyle(fontWeight: FontWeight.bold)),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 5),
+                  padding:EdgeInsets.only(bottom: 5),
                   child: Text('* Sharing Information With Them',style: TextStyle(fontWeight: FontWeight.bold)),
                 ),
               ],
@@ -89,7 +86,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                },
                activeColor: Colors.blue,               
                ),
-               Text('I have read and accept terms and conditions'),
+              const Text('I have read and accept terms and conditions'),
                 ],
               ),
               Padding(
@@ -97,10 +94,11 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Read the terms and conditions'),
-                    SizedBox(height: 20,),
-                    TextButton(onPressed: (){}, child:Padding(
-                      padding: const EdgeInsets.all(20.0),
+                   const Text('Read the terms and conditions'),
+                    const SizedBox(height: 20,),
+                    TextButton(onPressed: (){Navigator.push(context, new MaterialPageRoute(builder: (context) => new TermsAndCondition()));},
+                     child: const Padding(
+                      padding: EdgeInsets.all(20.0),
                       
                       child: Text(' Read  >>',style: TextStyle(
                         color: Colors.black,
@@ -122,21 +120,13 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
         )
       ],
       dotsDecorator: getDecoration(),
-      done:(agry==true) ? Text("Let's Go  >", style: TextStyle(fontWeight: FontWeight.bold,),) : Text(''),
-      onDone: () {
-        setState(() {
-        
-        if(agry==true){
-        
-          Navigator.pushReplacementNamed(context, App_const.homepage);
-        }
-        });
-      },
+      done:(agry==true) ? const Text("Let's Go  >", style: TextStyle(fontWeight: FontWeight.bold,),) : const Text(''),
+      onDone: () => ondone(context),
       showNextButton: show_Next_Button,
 
-      next: Icon(Icons.arrow_forward),
+      next:const Icon(Icons.arrow_forward),
       showSkipButton: true,
-      skip: Text('Skip'),
+      skip:const Text('Skip'),
            
     )
     );
@@ -145,8 +135,8 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
 
       DotsDecorator getDecoration() => DotsDecorator(
         color: Colors.black,
-        size: Size(10,10),
-        activeSize: Size(22, 12),
+        size:const Size(10,10),
+        activeSize:const Size(22, 12),
         activeShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
@@ -154,10 +144,10 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
       );
 
     PageDecoration getPageDecoration() => PageDecoration(
-      titleTextStyle: TextStyle(fontSize: 28,fontWeight: FontWeight.bold),
-      bodyTextStyle: TextStyle(fontSize: 20),
-      bodyPadding: EdgeInsets.all(18).copyWith(bottom: 0),
-      imagePadding: EdgeInsets.all(24),
+      titleTextStyle:const TextStyle(fontSize: 28,fontWeight: FontWeight.bold),
+      bodyTextStyle:const TextStyle(fontSize: 20),
+      bodyPadding:const EdgeInsets.all(18).copyWith(bottom: 0),
+      imagePadding:const EdgeInsets.all(24),
       pageColor: Colors.white,
     );
 
@@ -165,16 +155,23 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
 //last page condition
 
       PageDecoration getCondiPageDecoration() => PageDecoration(
-      titleTextStyle: TextStyle(fontSize: 28,fontWeight: FontWeight.bold),
-      titlePadding: EdgeInsets.all(0),
-      bodyTextStyle: TextStyle(fontSize: 1),
-      bodyPadding: EdgeInsets.all(0).copyWith(bottom: 0),
-      imagePadding: EdgeInsets.all(24),
+      titleTextStyle:const TextStyle(fontSize: 28,fontWeight: FontWeight.bold),
+      titlePadding:const EdgeInsets.all(0),
+      bodyTextStyle:const TextStyle(fontSize: 1),
+      bodyPadding:const EdgeInsets.all(0).copyWith(bottom: 0),
+      imagePadding:const EdgeInsets.all(24),
       pageColor: Colors.white,
     );
 
     void goToHome(context) => Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (_) => HomePage()),
+      MaterialPageRoute(builder: (_) => const HomePage()),
     );
+
+    void ondone(context)async{
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setBool('ON_BOAEDING', false);
+      await Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomePage()));
+     
+    }
 }
 
