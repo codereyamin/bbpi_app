@@ -2,26 +2,25 @@ import 'dart:convert';
 import 'package:bbpi/model/teacher_list.dart';
 import 'package:bbpi/teacher/view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter/services.dart' show rootBundle;
 
-class EmtListviwe extends StatefulWidget {
-  const EmtListviwe({Key? key}) : super(key: key);
+class NontechListviwe extends StatefulWidget {
+  const NontechListviwe({Key? key}) : super(key: key);
 
   static const String rooteNeme = '/teacherList';
 
   @override
-  State<EmtListviwe> createState() => _CmtListviweState();
+  State<NontechListviwe> createState() => _NontechListviweState();
 }
 
-class _CmtListviweState extends State<EmtListviwe> {
+class _NontechListviweState extends State<NontechListviwe> {
   List<TeacherList> teacherList = [];
 
   Future readJsonFile() async {
     final String response =
         await rootBundle.loadString('assets/json/teacherList.json');
-    print(response);
     final teacherData = await jsonDecode(response);
-    var list = teacherData["emt"] as List<dynamic>;
+    var list = teacherData["nontech"] as List<dynamic>;
     setState(() {
       teacherList = list.map((e) => TeacherList.fromJson(e)).toList();
     });
@@ -37,10 +36,10 @@ class _CmtListviweState extends State<EmtListviwe> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Electromedical Technology'),
+        title: Text('Non-Tech Department'),
       ),
       body: Column(children: [
-        teacherList.length > 0
+        teacherList.isNotEmpty
             ? Expanded(
                 child: ListView.builder(
                   itemCount: teacherList.length,

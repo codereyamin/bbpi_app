@@ -1,5 +1,8 @@
+import 'package:bbpi/teacher/aidt.dart';
 import 'package:bbpi/teacher/cmtlist.dart';
 import 'package:bbpi/teacher/emtlist.dart';
+import 'package:bbpi/teacher/nontech.dart';
+import 'package:bbpi/teacher/rat.dart';
 import 'package:flutter/material.dart';
 
 class Teacher extends StatelessWidget {
@@ -36,7 +39,12 @@ class Teacher extends StatelessWidget {
                   color: Colors.white,
                   name: 'Architecture & Interior Design Technology',
                   img: 'assets/architect.png',
-                  onTab: () {},
+                  onTab: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => AidtListviwe())));
+                  },
                 ),
               ),
               Padding(
@@ -61,7 +69,12 @@ class Teacher extends StatelessWidget {
                   color: Colors.white,
                   name: 'Refrigeration & Air-conditioning Technology',
                   img: 'assets/cooling.png',
-                  onTab: () {},
+                  onTab: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => RattListviwe())));
+                  },
                 ),
               ),
               Padding(
@@ -71,7 +84,12 @@ class Teacher extends StatelessWidget {
                   color: Colors.white,
                   name: 'Non-Tech Department',
                   img: 'assets/presentation.png',
-                  onTab: () {},
+                  onTab: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => NontechListviwe())));
+                  },
                 ),
               ),
             ],

@@ -1,7 +1,7 @@
 import 'package:bbpi/screen/onBoardingPage.dart';
 import 'package:bbpi/screen/splashscreen.dart';
 import 'package:bbpi/teacher/cmtlist.dart';
-import 'package:bbpi/teacher/cmtview.dart';
+import 'package:bbpi/teacher/view.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

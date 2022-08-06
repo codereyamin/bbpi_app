@@ -2,192 +2,241 @@
 	"cmt": [
 		{
 			"id": "1000",
-			"name": "Eng.Mohammad Seliem",
-			"position": "Instructor (Tec) & Head of the Department",
-			"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-            "image": "assets/about.png"
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+            "mobile": "+8801.........",
+			"email": "example@gmail.com",
+            "image": "assets/profile.png"
 		},
 		{
 			"id": "1001",
-			"name": "Eng.Mohammad Seliem",
-			"position": "Instructor (Tec) & Head of the Department",
-			"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-            "image": "assets/about.png"
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+            "mobile": "+8801.........",
+			"email": "example@gmail.com",
+            "image": "assets/profile.png"
 		},
-    {
+		{
 			"id": "1002",
-			"name": "Eng.Mohammad Seliem",
-			"position": "Instructor (Tec) & Head of the Department",
-			"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-            "image": "assets/about.png"
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+            "mobile": "+8801.........",
+			"email": "example@gmail.com",
+            "image": "assets/profile.png"
 		},
-    {
+		{
 			"id": "1003",
-			"name": "Eng.Mohammad Seliem",
-			"position": "Instructor (Tec) & Head of the Department",
-			"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-           "image": "assets/about.png"
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+            "mobile": "+8801.........",
+			"email": "example@gmail.com",
+            "image": "assets/profile.png"
 		},
-    {
+		{
 			"id": "1004",
-			"name": "Eng.Mohammad Seliem 2",
-			"position": "Instructor (Tec) & Head of the Department",
-	  		"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-           "image": "assets/about.png"
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+            "mobile": "+8801.........",
+			"email": "example@gmail.com",
+            "image": "assets/profile.png"
 		}
 		
 	],
   "emt": [
-		{
-			"id": "1001",
-			"name": "Eng.Mohammad Seliem",
-			"position": "Instructor (Tec) & Head of the Department",
-			"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-            "image": "assets/about.png"
-		},
-		{
-			"id": "1002",
-			"name": "Eng.Mohammad Seliem",
-			"position": "Instructor (Tec) & Head of the Department",
-			"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-            "image": "assets/about.png"
-		},
+	{
+		"id": "2000",
+		"name": "Name of Teacher ",
+		"position": "Teacher position ",
+		"education": "Last education ",
+		"mobile": "+8801.........",
+		"email": "example@gmail.com",
+		"image": "assets/profile.png"
+	},
+	{
+		"id": "2001",
+		"name": "Name of Teacher ",
+		"position": "Teacher position ",
+		"education": "Last education ",
+		"mobile": "+8801.........",
+		"email": "example@gmail.com",
+		"image": "assets/profile.png"
+	},
     {
-			"id": "1003",
-			"name": "Eng.Mohammad Seliem",
-			"position": "Instructor (Tec) & Head of the Department",
-			"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-            "image": "assets/about.png"
-		},
+		"id": "2002",
+		"name": "Name of Teacher ",
+		"position": "Teacher position ",
+		"education": "Last education ",
+		"mobile": "+8801.........",
+		"email": "example@gmail.com",
+		"image": "assets/profile.png"
+	},
     {
-			"id": "1004",
-			"name": "Eng.Mohammad Seliem",
-			"position": "Instructor (Tec) & Head of the Department",
-			"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-            "image": "assets/about.png"
-		},
+		"id": "2003",
+		"name": "Name of Teacher ",
+		"position": "Teacher position ",
+		"education": "Last education ",
+		"mobile": "+8801.........",
+		"email": "example@gmail.com",
+		"image": "assets/profile.png"
+	},
     {
-			"id": "1005",
-			"name": "Eng.Mohammad Seliem emt",
-			"position": "Instructor (Tec) & Head of the Department",
-			"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-            "image": "assets/about.png"
-		}
+		"id": "2004",
+		"name": "Name of Teacher ",
+		"position": "Teacher position ",
+		"education": "Last education ",
+		"mobile": "+8801.........",
+		"email": "example@gmail.com",
+		"image": "assets/profile.png"
+	}
 		
 	],
   "aidt": [
 		{
-			"id": "10001",
-			"name": "Eng.Mohammad Seliem",
-			"position": "Instructor (Tec) & Head of the Department",
-			"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-            "image": "assets/about.png"
+			"id": "3000",
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+			"mobile": "+8801.........",
+			"email": "example@gmail.com",
+			"image": "assets/profile.png"
 		},
 		{
-			"id": "10002",
-			"name": "Eng.Mohammad Seliem",
-			"position": "Instructor (Tec) & Head of the Department",
-			"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-            "image": "assets/about.png"
+			"id": "3001",
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+			"mobile": "+8801.........",
+			"email": "example@gmail.com",
+			"image": "assets/profile.png"
 		},
-    {
-			"id": "10003",
-			"name": "Eng.Mohammad Seliem",
-			"position": "Instructor (Tec) & Head of the Department",
-			"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-           "image": "assets/about.png"
+		{
+			"id": "3002",
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+			"mobile": "+8801.........",
+			"email": "example@gmail.com",
+			"image": "assets/profile.png"
 		},
-    {
-			"id": "10004",
-			"name": "Eng.Mohammad Seliem",
-			"position": "Instructor (Tec) & Head of the Department",
-			"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-            "image": "assets/about.png"
+		{
+			"id": "3003",
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+			"mobile": "+8801.........",
+			"email": "example@gmail.com",
+			"image": "assets/profile.png"
 		},
-    {
-			"id": "10005",
-			"name": "Eng.Mohammad Seliem emt",
-			"position": "Instructor (Tec) & Head of the Department",
-	 		"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-            "image": "assets/about.png"
+		{
+			"id": "3004",
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+			"mobile": "+8801.........",
+			"email": "example@gmail.com",
+			"image": "assets/profile.png"
 		}
 		
 	],
   "rat": [
 		{
-			"id": "10001",
-			"name": "Eng.Mohammad Seliem",
-			"position": "Instructor (Tec) & Head of the Department",
-			"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-            "image": "assets/about.png"
+			"id": "4000",
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+			"mobile": "+8801.........",
+			"email": "example@gmail.com",
+			"image": "assets/profile.png"
 		},
 		{
-			"id": "10002",
-			"name": "Eng.Mohammad Seliem",
-			"position": "Instructor (Tec) & Head of the Department",
-			"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-           "image": "assets/about.png"
+			"id": "4001",
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+			"mobile": "+8801.........",
+			"email": "example@gmail.com",
+			"image": "assets/profile.png"
 		},
-    {
-			"id": "10003",
-			"name": "Eng.Mohammad Seliem",
-			"position": "Instructor (Tec) & Head of the Department",
-			"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-            "image": "assets/about.png"
+		{
+			"id": "4002",
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+			"mobile": "+8801.........",
+			"email": "example@gmail.com",
+			"image": "assets/profile.png"
 		},
-    {
-			"id": "10004",
-			"name": "Eng.Mohammad Seliem",
-			"position": "Instructor (Tec) & Head of the Department",
-			"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-            "image": "assets/about.png"
+		{
+			"id": "4003",
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+			"mobile": "+8801.........",
+			"email": "example@gmail.com",
+			"image": "assets/profile.png"
 		},
-    {
-			"id": "10005",
-			"name": "Eng.Mohammad Seliem",
-			"position": "Instructor (Tec) & Head of the Department",
-			"education": "B.sc in CSE(DUET)",
-            "mobile": "+8801818-237705",
-			"email": "selime@gmail.com",
-           "image": "assets/about.png"
+		{
+			"id": "4004",
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+			"mobile": "+8801.........",
+			"email": "example@gmail.com",
+			"image": "assets/profile.png"
+		}
+		
+	],
+	
+	"nontech": [
+		{
+			"id": "5000",
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+			"mobile": "+8801.........",
+			"email": "example@gmail.com",
+			"image": "assets/profile.png"
+		},
+		{
+			"id": "5001",
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+			"mobile": "+8801.........",
+			"email": "example@gmail.com",
+			"image": "assets/profile.png"
+		},
+		{
+			"id": "5002",
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+			"mobile": "+8801.........",
+			"email": "example@gmail.com",
+			"image": "assets/profile.png"
+		},
+		{
+			"id": "5003",
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+			"mobile": "+8801.........",
+			"email": "example@gmail.com",
+			"image": "assets/profile.png"
+		},
+		{
+			"id": "5004",
+			"name": "Name of Teacher ",
+			"position": "Teacher position ",
+			"education": "Last education ",
+			"mobile": "+8801.........",
+			"email": "example@gmail.com",
+			"image": "assets/profile.png"
 		}
 		
 	]

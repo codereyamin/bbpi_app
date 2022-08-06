@@ -22,10 +22,6 @@ class _ContactDevloperState extends State<ContactDevloper> {
     if (await canLaunch(urlString)) {
       await launch(
         urlString,
-        // forceWebView: true,
-        // forceSafariVC: true,
-        // enableJavaScript: true,
-        // enableDomStorage: true,
       );
     } else {
       throw 'Could not Launch $urlString';
