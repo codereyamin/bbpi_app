@@ -44,9 +44,6 @@ class _TeacherDetailScringState extends State<TeacherDetailScring> {
   String url_mail = "mailto:{teacherMail}.com?subject=BBPI&body=BBPI%20plugin";
   String url_phone = "tel:urlNumber";
 
-  final String lat = "teachernumber";
-  final String lng = "-122.0312";
-
   void grtUrlLauncher(
     String urlString,
   ) async {
@@ -98,30 +95,6 @@ class _TeacherDetailScringState extends State<TeacherDetailScring> {
                     color: Colors.blueGrey, fontWeight: FontWeight.bold),
               ),
             ),
-            Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: ElevatedButton(
-                  onPressed: () async {
-                    final googleMapsUrl = teachernumber.toString();
-                    final appleMapsUrl = teachernumber.toString();
-                    if (await canLaunch(googleMapsUrl)) {
-                      await launch(googleMapsUrl);
-                    }
-                    if (await canLaunch(appleMapsUrl)) {
-                      await launch(appleMapsUrl, forceSafariVC: false);
-                    } else {
-                      throw "Couldn't launch URL";
-                    }
-                  },
-                  style: ElevatedButton.styleFrom(primary: Colors.white),
-                  child: Text(
-                    teacherMail,
-                    style: TextStyle(
-                        color: Colors.blueGrey,
-                        backgroundColor: Colors.white,
-                        fontSize: 18),
-                  ),
-                )),
             Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
