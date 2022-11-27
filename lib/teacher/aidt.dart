@@ -29,17 +29,17 @@ class _AidtListviweState extends State<AidtListviwe> {
   @override
   void initState() {
     super.initState();
-    this.readJsonFile();
+    readJsonFile();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Architecture & Interior Design Technology'),
+        title: const Text('Architecture & Interior Design Technology'),
       ),
       body: Column(children: [
-        teacherList.length > 0
+        teacherList.isNotEmpty
             ? Expanded(
                 child: ListView.builder(
                   itemCount: teacherList.length,
@@ -61,9 +61,7 @@ class _AidtListviweState extends State<AidtListviwe> {
                   },
                 ),
               )
-            : Container(
-                child: Text('no file'),
-              )
+            : const Text('no file')
       ]),
     );
   }

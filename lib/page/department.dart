@@ -12,47 +12,46 @@ class Department extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-               Padding(
-                 padding: const EdgeInsets.all(20.0),
-                 child: _customButton(
-                          context: context,
-                          color: Colors.white,
-                          name: 'Computer Technology',
-                          img: 'assets/computer.png',
-                          onTab: (){},
-                        ),
-               ),
-               Padding(
-                 padding: const EdgeInsets.all(20.0),
-                 child: _customButton(
-                          context: context,
-                          color: Colors.white,
-                          name: 'Architecture & Interior Design Technology',
-                          img: 'assets/architect.png',
-                          onTab: (){},
-                        ),
-               ),
-               
-               Padding(
-                 padding: const EdgeInsets.all(20.0),
-                 child: _customButton(
-                          context: context,
-                          color: Colors.white,
-                          name: 'Electromedial Technology',
-                          img: 'assets/medical-research.png',
-                          onTab: (){},
-                        ),
-               ),
-               Padding(
-                 padding: const EdgeInsets.all(20.0),
-                 child: _customButton(
-                          context: context,
-                          color: Colors.white,
-                          name: 'Refrigeration & Air-conditioning Technology',
-                          img: 'assets/cooling.png',
-                          onTab: (){},
-                        ),
-               )
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: _customButton(
+                  context: context,
+                  color: Colors.white,
+                  name: 'Computer Technology',
+                  img: 'assets/computer.png',
+                  onTab: () {},
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: _customButton(
+                  context: context,
+                  color: Colors.white,
+                  name: 'Architecture & Interior Design Technology',
+                  img: 'assets/architect.png',
+                  onTab: () {},
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: _customButton(
+                  context: context,
+                  color: Colors.white,
+                  name: 'Electromedial Technology',
+                  img: 'assets/medical-research.png',
+                  onTab: () {},
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: _customButton(
+                  context: context,
+                  color: Colors.white,
+                  name: 'Refrigeration & Air-conditioning Technology',
+                  img: 'assets/cooling.png',
+                  onTab: () {},
+                ),
+              )
             ],
           ),
         ),
@@ -61,62 +60,64 @@ class Department extends StatelessWidget {
   }
 }
 
-
-
- Widget _customButton({
-    BuildContext? context,
-    @required Color? color,
-    @required String? name,
-    @required String? img,
-   // @required IconData? iconData,
-    @required VoidCallback? onTab,
-  }) {
-    return GestureDetector(
-      onTap: onTab,
-      child: Container(
-        alignment: Alignment.center,
-        padding: EdgeInsets.all(5.0),
-        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-        height: 180.0,
-        decoration: BoxDecoration(
-            color: color, borderRadius: BorderRadius.circular(5.0),
-
-            boxShadow: [
-                 BoxShadow(
-                 color: Colors.grey.withOpacity(0.5),
-                 spreadRadius: 3,
-                 blurRadius: 4,
-                 offset: Offset(0, 2), // changes position of shadow
+Widget _customButton({
+  BuildContext? context,
+  @required Color? color,
+  @required String? name,
+  @required String? img,
+  // @required IconData? iconData,
+  @required VoidCallback? onTab,
+}) {
+  return GestureDetector(
+    onTap: onTab,
+    child: Container(
+      alignment: Alignment.center,
+      padding: const EdgeInsets.all(5.0),
+      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      height: 180.0,
+      decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(5.0),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 3,
+              blurRadius: 4,
+              offset: const Offset(0, 2), // changes position of shadow
+            ),
+          ]),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 15),
+            child: Image.asset(
+              '$img',
+              fit: BoxFit.cover,
+              width: 70,
+              height: 70,
+            ),
+          ),
+          Text(
+            '$name',
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.blueAccent),
+          ),
+        ],
       ),
-            ]
+    ),
+  );
+}
 
-            ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(bottom: 15),
-              child: Image.asset('$img',fit: BoxFit.cover,width: 70,height: 70,),
-            ),
-            Text(
-              '$name',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold,color: Colors.blueAccent),
-            ),
-          ],
-        ),
-        
+Widget buildImage(String urlImage, int index) => Container(
+      margin: const EdgeInsets.symmetric(horizontal: 24),
+      color: Colors.grey,
+      child: Image.asset(
+        urlImage,
+        fit: BoxFit.cover,
       ),
     );
-  }
-
-Widget buildImage( String urlImage, int index)=> Container(
-  margin: EdgeInsets.symmetric(horizontal: 24),
-  color: Colors.grey,
-  
-  child: Image.asset(
-    '${urlImage}',
-    fit: BoxFit.cover,
-  ),
-);

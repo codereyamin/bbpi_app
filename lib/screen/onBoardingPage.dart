@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:bbpi/drawer/drawer.dart';
 import 'package:bbpi/screen/termsCondition.dart';
 import 'package:flutter/material.dart';
@@ -103,9 +105,9 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                           onPressed: () {
                             Navigator.push(
                                 context,
-                                new MaterialPageRoute(
+                                MaterialPageRoute(
                                     builder: (context) =>
-                                        new TermsAndCondition()));
+                                        const TermsAndCondition()));
                           },
                           child: const Padding(
                             padding: EdgeInsets.all(20.0),
@@ -180,13 +182,13 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
       );
 
   void goToHome(context) => Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => CustomDrawer()),
+        MaterialPageRoute(builder: (_) => const CustomDrawer()),
       );
 
   void ondone(context) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('ON_BOAEDING', false);
-    await Navigator.pushReplacement(context,
-        new MaterialPageRoute(builder: (context) => new CustomDrawer()));
+    await Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => const CustomDrawer()));
   }
 }

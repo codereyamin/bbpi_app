@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_collection_literals
+
 class TeacherList {
   String id;
   String name;
@@ -30,14 +32,14 @@ class TeacherList {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['position'] = this.position;
-    data['education'] = this.education;
-    data['mobile'] = this.mobile;
-    data['email'] = this.email;
-    data['image'] = this.image;
+    final Map<String, dynamic> data = Map<String, dynamic>();
+    data['id'] = id;
+    data['name'] = name;
+    data['position'] = position;
+    data['education'] = education;
+    data['mobile'] = mobile;
+    data['email'] = email;
+    data['image'] = image;
     return data;
   }
 }

@@ -27,8 +27,8 @@ class MyApp extends StatelessWidget {
       home:
           SafeArea(child: show ? const OnBoardingPage() : const Splashscreen()),
       routes: {
-        CmtListviwe.rooteNeme: (context) => CmtListviwe(),
-        TeacherDetailScring.rooteNeme: (context) => TeacherDetailScring(),
+        CmtListviwe.rooteNeme: (context) => const CmtListviwe(),
+        TeacherDetailScring.rooteNeme: (context) => const TeacherDetailScring(),
       },
     );
   }

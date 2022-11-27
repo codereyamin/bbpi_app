@@ -3,7 +3,6 @@ import 'package:bbpi/page/department.dart';
 import 'package:bbpi/page/feedbackAndratting.dart';
 import 'package:bbpi/page/teacher.dart';
 import 'package:flutter/material.dart';
-import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../config/internet_helper.dart';
@@ -41,9 +40,9 @@ class _HomeState extends State<Home> {
                         onTab: () {
                           Navigator.push(
                               context,
-                              new MaterialPageRoute(
+                              MaterialPageRoute(
                                   builder: (context) =>
-                                      new FeedbackAndRatting()));
+                                      const FeedbackAndRatting()));
                         }),
                   ),
                   Expanded(
@@ -56,8 +55,8 @@ class _HomeState extends State<Home> {
                       setState(() {
                         Navigator.push(
                             context,
-                            new MaterialPageRoute(
-                                builder: (context) => new Teacher()));
+                            MaterialPageRoute(
+                                builder: (context) => const Teacher()));
                       });
                     },
                   ))
@@ -72,9 +71,9 @@ class _HomeState extends State<Home> {
                       onTab: () {
                         Navigator.push(
                             context,
-                            new MaterialPageRoute(
+                            MaterialPageRoute(
                                 builder: (context) =>
-                                    new FeedbackAndRatting()));
+                                    const FeedbackAndRatting()));
                       },
                     ),
                   ),
@@ -87,8 +86,9 @@ class _HomeState extends State<Home> {
                     onTab: () {
                       Navigator.push(
                           context,
-                          new MaterialPageRoute(
-                              builder: (context) => new FeedbackAndRatting()));
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const FeedbackAndRatting()));
                     },
                   ))
                 ]),
@@ -102,8 +102,8 @@ class _HomeState extends State<Home> {
                       onTab: () {
                         Navigator.push(
                             context,
-                            new MaterialPageRoute(
-                                builder: (context) => new Department()));
+                            MaterialPageRoute(
+                                builder: (context) => const Department()));
                       },
                     ),
                   ),
@@ -116,8 +116,8 @@ class _HomeState extends State<Home> {
                     onTab: () {
                       Navigator.push(
                           context,
-                          new MaterialPageRoute(
-                              builder: (context) => new AboutBbpi()));
+                          MaterialPageRoute(
+                              builder: (context) => const AboutBbpi()));
                     },
                   ))
                 ]),
@@ -131,9 +131,9 @@ class _HomeState extends State<Home> {
                       onTab: () {
                         Navigator.push(
                             context,
-                            new MaterialPageRoute(
+                            MaterialPageRoute(
                                 builder: (context) =>
-                                    new FeedbackAndRatting()));
+                                    const FeedbackAndRatting()));
                       },
                     ),
                   ),
@@ -146,8 +146,9 @@ class _HomeState extends State<Home> {
                     onTab: () {
                       Navigator.push(
                           context,
-                          new MaterialPageRoute(
-                              builder: (context) => new FeedbackAndRatting()));
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const FeedbackAndRatting()));
                     },
                   ))
                 ]),
@@ -162,8 +163,8 @@ class _HomeState extends State<Home> {
                         if (await internet()) {
                           _launchURL();
                         } else {
-                          final snakbar = SnackBar(
-                              content: const Text('Please conect to internet'));
+                          const snakbar = SnackBar(
+                              content: Text('Please conect to internet'));
                           ScaffoldMessenger.of(context).showSnackBar(snakbar);
                         }
                       },
@@ -194,8 +195,8 @@ Widget _customButton({
     onTap: onTab,
     child: Container(
       alignment: Alignment.center,
-      padding: EdgeInsets.all(5.0),
-      margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      padding: const EdgeInsets.all(5.0),
+      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       height: 180.0,
       decoration: BoxDecoration(
           color: color,
@@ -205,7 +206,7 @@ Widget _customButton({
               color: Colors.grey.withOpacity(0.5),
               spreadRadius: 3,
               blurRadius: 4,
-              offset: Offset(0, 2), // changes position of shadow
+              offset: const Offset(0, 2), // changes position of shadow
             ),
           ]),
       child: Column(
@@ -223,7 +224,7 @@ Widget _customButton({
           ),
           Text(
             '$name',
-            style: TextStyle(
+            style: const TextStyle(
                 fontSize: 18.0,
                 fontWeight: FontWeight.bold,
                 color: Colors.blueAccent),
@@ -235,10 +236,10 @@ Widget _customButton({
 }
 
 Widget buildImage(String urlImage, int index) => Container(
-      margin: EdgeInsets.symmetric(horizontal: 24),
+      margin: const EdgeInsets.symmetric(horizontal: 24),
       color: Colors.grey,
       child: Image.asset(
-        '${urlImage}',
+        urlImage,
         fit: BoxFit.cover,
       ),
     );

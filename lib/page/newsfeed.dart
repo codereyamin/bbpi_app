@@ -5,8 +5,6 @@ class NewsFeed extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('News Feed'),
-    );
+    return const Text('News Feed');
   }
 }

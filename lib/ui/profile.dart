@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class PProfile extends StatefulWidget {
-  PProfile({Key? key}) : super(key: key);
+  const PProfile({Key? key}) : super(key: key);
 
   @override
   State<PProfile> createState() => _PProfileState();
@@ -10,8 +10,6 @@ class PProfile extends StatefulWidget {
 class _PProfileState extends State<PProfile> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('PProfile PProfile'),
-    );
+    return const Text('PProfile PProfile');
   }
 }

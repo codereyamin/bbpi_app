@@ -19,7 +19,7 @@ class _CmtListviweState extends State<EmtListviwe> {
   Future readJsonFile() async {
     final String response =
         await rootBundle.loadString('assets/json/teacherList.json');
-    print(response);
+
     final teacherData = await jsonDecode(response);
     var list = teacherData["emt"] as List<dynamic>;
     setState(() {
@@ -30,17 +30,17 @@ class _CmtListviweState extends State<EmtListviwe> {
   @override
   void initState() {
     super.initState();
-    this.readJsonFile();
+    readJsonFile();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Electromedical Technology'),
+        title: const Text('Electromedical Technology'),
       ),
       body: Column(children: [
-        teacherList.length > 0
+        teacherList.isNotEmpty
             ? Expanded(
                 child: ListView.builder(
                   itemCount: teacherList.length,
@@ -62,9 +62,7 @@ class _CmtListviweState extends State<EmtListviwe> {
                   },
                 ),
               )
-            : Container(
-                child: Text('no file'),
-              )
+            : const Text('no file')
       ]),
     );
   }

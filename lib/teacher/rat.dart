@@ -29,17 +29,17 @@ class _RattListviweState extends State<RattListviwe> {
   @override
   void initState() {
     super.initState();
-    this.readJsonFile();
+    readJsonFile();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Refrigeration & Air-Conditioning Technology'),
+        title: const Text('Refrigeration & Air-Conditioning Technology'),
       ),
       body: Column(children: [
-        teacherList.length > 0
+        teacherList.isNotEmpty
             ? Expanded(
                 child: ListView.builder(
                   itemCount: teacherList.length,
@@ -61,9 +61,7 @@ class _RattListviweState extends State<RattListviwe> {
                   },
                 ),
               )
-            : Container(
-                child: Text('no file'),
-              )
+            : const Text('no file')
       ]),
     );
   }

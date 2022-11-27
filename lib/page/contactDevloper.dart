@@ -1,7 +1,11 @@
+// ignore_for_file: non_constant_identifier_names, must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactDevloper extends StatefulWidget {
+  const ContactDevloper({Key? key}) : super(key: key);
+
   @override
   State<ContactDevloper> createState() => _ContactDevloperState();
 }
@@ -33,28 +37,26 @@ class _ContactDevloperState extends State<ContactDevloper> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Devloper'),
+          title: const Text('Devloper'),
         ),
         body: SingleChildScrollView(
             child: Column(
           children: [
-            Container(
-              child: Image.asset(
-                'assets/me.jpg',
-                height: 300,
-                width: double.infinity,
-              ),
+            Image.asset(
+              'assets/me.jpg',
+              height: 300,
+              width: double.infinity,
             ),
-            Center(
+            const Center(
               child: Text(
                 'Tuhin Ikbal Eyamin',
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Center(
+            const Center(
               child: Text(
                 'Founder of BBPI Official Application',
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.normal),
@@ -62,33 +64,33 @@ class _ContactDevloperState extends State<ContactDevloper> {
             ),
             Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
                 Custombutton(
-                  icon: Icon(Icons.mail),
-                  nameText: Text('Contact To  Email',
+                  icon: const Icon(Icons.mail),
+                  nameText: const Text('Contact To  Email',
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold)),
                   onClick: () => grtUrlLauncher(url_mail),
                 ),
                 Custombutton(
-                  icon: Icon(Icons.phone),
-                  nameText: Text('Contact To Phone Number',
+                  icon: const Icon(Icons.phone),
+                  nameText: const Text('Contact To Phone Number',
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold)),
                   onClick: () => grtUrlLauncher(url_phone),
                 ),
                 Custombutton(
-                  icon: Icon(Icons.sms),
-                  nameText: Text('Contact To Sms',
+                  icon: const Icon(Icons.sms),
+                  nameText: const Text('Contact To Sms',
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold)),
                   onClick: () => grtUrlLauncher(url_sms),
                 ),
                 Custombutton(
-                  icon: Icon(Icons.facebook),
-                  nameText: Text('Contact To Facebook',
+                  icon: const Icon(Icons.facebook),
+                  nameText: const Text('Contact To Facebook',
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold)),
                   onClick: () => grtUrlLauncher(url_fb),
@@ -99,7 +101,7 @@ class _ContactDevloperState extends State<ContactDevloper> {
                     color: Colors.white,
                     width: 24,
                   ),
-                  nameText: Text('Contact To LinkendIn',
+                  nameText: const Text('Contact To LinkendIn',
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold)),
                   onClick: () => grtUrlLauncher(url_linkedin),
@@ -110,7 +112,7 @@ class _ContactDevloperState extends State<ContactDevloper> {
                     color: Colors.white,
                     width: 24,
                   ),
-                  nameText: Text('Contact To Twitter',
+                  nameText: const Text('Contact To Twitter',
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold)),
                   onClick: () => grtUrlLauncher(url_twitter),
@@ -121,7 +123,7 @@ class _ContactDevloperState extends State<ContactDevloper> {
                     color: Colors.white,
                     width: 24,
                   ),
-                  nameText: Text('Contact To Instagram',
+                  nameText: const Text('Contact To Instagram',
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold)),
                   onClick: () => grtUrlLauncher(url_instagram),
@@ -132,19 +134,19 @@ class _ContactDevloperState extends State<ContactDevloper> {
                     color: Colors.white,
                     width: 24,
                   ),
-                  nameText: Text('Contact To Whatsapp',
+                  nameText: const Text('Contact To Whatsapp',
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold)),
                   onClick: () => grtUrlLauncher(url_phone),
                 ),
                 Custombutton(
-                  icon: Icon(Icons.bug_report),
-                  nameText: Text('Send Me Bug Info',
+                  icon: const Icon(Icons.bug_report),
+                  nameText: const Text('Send Me Bug Info',
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold)),
                   onClick: () => grtUrlLauncher(url_mail),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 )
               ],
@@ -173,8 +175,8 @@ class Custombutton extends StatelessWidget {
     return GestureDetector(
       onTap: onClick,
       child: Container(
-        margin: EdgeInsets.all(10.0),
-        padding: EdgeInsets.all(12.0),
+        margin: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(12.0),
         decoration: BoxDecoration(
             color: Colors.blue, borderRadius: BorderRadius.circular(22.0)),
         child: ListTile(

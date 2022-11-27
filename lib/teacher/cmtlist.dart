@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 import 'dart:convert';
 import 'package:bbpi/model/teacher_list.dart';
 import 'package:bbpi/teacher/view.dart';
@@ -30,14 +32,14 @@ class _CmtListviweState extends State<CmtListviwe> {
   @override
   void initState() {
     super.initState();
-    this.readJsonFile();
+    readJsonFile();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Computer Technology'),
+        title: const Text('Computer Technology'),
       ),
       body: Column(children: [
         teacherList.isNotEmpty
@@ -63,7 +65,7 @@ class _CmtListviweState extends State<CmtListviwe> {
                 ),
               )
             : Container(
-                child: Text('no file'),
+                child: const Text('no file'),
               )
       ]),
     );

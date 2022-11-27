@@ -29,14 +29,14 @@ class _NontechListviweState extends State<NontechListviwe> {
   @override
   void initState() {
     super.initState();
-    this.readJsonFile();
+    readJsonFile();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Non-Tech Department'),
+        title: const Text('Non-Tech Department'),
       ),
       body: Column(children: [
         teacherList.isNotEmpty
@@ -61,9 +61,7 @@ class _NontechListviweState extends State<NontechListviwe> {
                   },
                 ),
               )
-            : Container(
-                child: Text('no file'),
-              )
+            : const Text('no file')
       ]),
     );
   }
