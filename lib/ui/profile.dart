@@ -14,7 +14,7 @@ class _PProfileState extends State<PProfile> {
       body: SafeArea(
           child: SingleChildScrollView(
         child: Stack(children: [
-          SizedBox(
+          const SizedBox(
             width: double.infinity,
             height: 5000,
           ),
@@ -25,7 +25,7 @@ class _PProfileState extends State<PProfile> {
             child: Container(
                 width: double.infinity,
                 height: 200,
-                decoration: BoxDecoration(color: Colors.blue)),
+                decoration: const BoxDecoration(color: Colors.blue)),
           ),
           Positioned(
             top: 0,
@@ -34,7 +34,7 @@ class _PProfileState extends State<PProfile> {
             child: Stack(
               alignment: AlignmentDirectional.topCenter,
               children: [
-                SizedBox(
+                const SizedBox(
                   width: double.infinity,
                   height: 5000,
                 ),
@@ -45,11 +45,11 @@ class _PProfileState extends State<PProfile> {
                       height: 400,
                       decoration: BoxDecoration(
                           color: Colors.grey.shade400,
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                               topLeft: Radius.circular(20),
                               topRight: Radius.circular(20))),
                     )),
-                Positioned(
+                const Positioned(
                   top: 60,
                   child: CircleAvatar(
                     radius: 80,
@@ -60,28 +60,28 @@ class _PProfileState extends State<PProfile> {
                     top: 270,
                     child: Column(
                       children: [
-                        Text(
+                        const Text(
                           "Tuhin Ikbal Eyamin",
                           style: TextStyle(
                               fontSize: 22, fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
-                        Text(
+                        const Text(
                           "Email : codereyamin@gmail.com",
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.w500),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
-                        Text(
+                        const Text(
                           "Mobile : +01517822052",
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.w500),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 100,
                         ),
                         Row(
@@ -89,12 +89,12 @@ class _PProfileState extends State<PProfile> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             ElevatedButton(
-                                onPressed: () {}, child: Text("Update")),
-                            SizedBox(
+                                onPressed: () {}, child: const Text("Update")),
+                            const SizedBox(
                               width: 100,
                             ),
                             ElevatedButton(
-                                onPressed: () {}, child: Text("LogOut"))
+                                onPressed: () {}, child: const Text("LogOut"))
                           ],
                         )
                       ],

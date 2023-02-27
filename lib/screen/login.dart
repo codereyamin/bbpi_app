@@ -4,8 +4,6 @@ import 'package:bbpi/screen/signup.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../auth/authcontroler.dart';
 import '../drawer/drawer.dart';
 import '../widget/show_dilog.dart';
 

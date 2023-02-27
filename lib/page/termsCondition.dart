@@ -1,3 +1,4 @@
+// ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
 
@@ -11,11 +12,11 @@ class TermsAndCondition extends StatefulWidget {
 class _TermsAndConditionState extends State<TermsAndCondition> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child:  Scaffold(appBar: AppBar(title: Text('title')),
-    body: Column(
-        children:const [
-          Text(' i will add next update')
-        ],
+    return SafeArea(
+        child: Scaffold(
+      appBar: AppBar(title: const Text('title')),
+      body: Column(
+        children: const [Text(' i will add next update')],
       ),
     ));
   }

@@ -46,7 +46,7 @@ class _MainPageState extends State<MainPage> {
             selectedFontSize: 20,
             enableFeedback: false,
             type: BottomNavigationBarType.fixed,
-            backgroundColor: Color.fromARGB(255, 5, 170, 182),
+            backgroundColor: const Color.fromARGB(255, 5, 170, 182),
             unselectedFontSize: 16,
             selectedItemColor: Colors.white,
             unselectedItemColor: Colors.white70,
