@@ -1,4 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     package="com.example.bbpi">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -30,6 +31,11 @@
    <application
         android:label="bbpi"
        
+=======
+    package="com.example.bbpi_app">
+   <application
+        android:label="bbpi_app"
+>>>>>>> 9d840eb36764cd1f2f50e2dec67bffe580503b5c
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
