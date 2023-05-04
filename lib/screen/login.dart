@@ -39,8 +39,8 @@ class LoginPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    "Hello",
-                    style: TextStyle(fontSize: 70, fontWeight: FontWeight.bold),
+                    "Hello Welcome",
+                    style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                   ),
                   Text(
                     "Sign into your account",

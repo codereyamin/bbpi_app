@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # bbpi
-=======
-# bbpi_app
->>>>>>> 9d840eb36764cd1f2f50e2dec67bffe580503b5c
 
 A new Flutter project.
 
