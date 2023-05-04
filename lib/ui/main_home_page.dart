@@ -6,8 +6,8 @@ import '../page/department.dart';
 import '../page/teacher.dart';
 import 'bloodCollection.dart';
 import 'classRoting.dart';
-import 'collageResult.dart';
-import 'newsPeed.dart';
+import 'collage_result.dart';
+import 'news_peed.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -20,21 +20,19 @@ class _HomeScreenState extends State<HomeScreen> {
   double xoffset = 0;
   double yoffset = 0;
 
-  bool isDrawrOpen = false;
+  bool isDrawerOpen = false;
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: AnimatedContainer(
         transform: Matrix4.translationValues(xoffset, yoffset, 0)
-          ..scale(isDrawrOpen ? 0.90 : 1.00)
-          ..rotateZ(isDrawrOpen ? -50 : 0),
+          ..scale(isDrawerOpen ? 0.90 : 1.00)
+          ..rotateZ(isDrawerOpen ? -50 : 0),
         duration: const Duration(milliseconds: 200),
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: isDrawrOpen
-              ? BorderRadius.circular(40)
-              : BorderRadius.circular(0),
+          borderRadius: isDrawerOpen ? BorderRadius.circular(40) : BorderRadius.circular(0),
         ),
         child: SingleChildScrollView(
           child: Column(
@@ -47,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    isDrawrOpen
+                    isDrawerOpen
                         ? InkWell(
                             child: const Icon(
                               Icons.arrow_back,
@@ -57,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               setState(() {
                                 xoffset = 0;
                                 yoffset = 0;
-                                isDrawrOpen = false;
+                                isDrawerOpen = false;
                               });
                             },
                           )
@@ -70,16 +68,14 @@ class _HomeScreenState extends State<HomeScreen> {
                               setState(() {
                                 xoffset = 250;
                                 yoffset = 130;
-                                isDrawrOpen = true;
+                                isDrawerOpen = true;
                               });
                             },
                           ),
                     const Text(
                       'BBPI',
                       style: TextStyle(
-                          fontSize: 25,
-                          color: Colors.black87,
-                          decoration: TextDecoration.none),
+                          fontSize: 25, color: Colors.black87, decoration: TextDecoration.none),
                     ),
                     Container()
                   ],
@@ -98,9 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         name: 'News Feed',
                         img: 'assets/online-registration.png',
                         onTab: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => NewsPeed())),
+                            context, MaterialPageRoute(builder: (context) => const NewsPeed())),
                       ),
                     ),
                     Expanded(
@@ -112,9 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       onTab: () {
                         setState(() {
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Teacher()));
+                              context, MaterialPageRoute(builder: (context) => const Teacher()));
                         });
                       },
                     ))
@@ -127,10 +119,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         name: 'Collage Result',
                         img: 'assets/information.png',
                         onTab: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => ColageResult()));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => const CollageResult()));
                         },
                       ),
                     ),
@@ -142,9 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       img: 'assets/checklist.png',
                       onTab: () {
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => ClassRoting()));
+                            context, MaterialPageRoute(builder: (context) => const ClassRoting()));
                       },
                     ))
                   ]),
@@ -157,9 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         img: 'assets/department.png',
                         onTab: () {
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Department()));
+                              context, MaterialPageRoute(builder: (context) => const Department()));
                         },
                       ),
                     ),
@@ -171,9 +157,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       img: 'assets/direct.png',
                       onTab: () {
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => AboutBbpi()));
+                            context, MaterialPageRoute(builder: (context) => const AboutBbpi()));
                       },
                     ))
                   ]),
@@ -186,9 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         img: 'assets/open-book.png',
                         onTab: () {
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => BookList()));
+                              context, MaterialPageRoute(builder: (context) => const BookList()));
                         },
                       ),
                     ),
@@ -199,10 +181,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       name: 'Blood Collection',
                       img: 'assets/hospital.png',
                       onTab: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => BloodCollection()));
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => const BloodCollection()));
                       },
                     ))
                   ]),
@@ -239,20 +219,17 @@ Widget _customButton({
     onTap: onTab,
     child: Container(
       alignment: Alignment.center,
-      padding: EdgeInsets.all(5.0),
-      margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      padding: const EdgeInsets.all(5.0),
+      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       height: 180.0,
-      decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(5.0),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
-              spreadRadius: 3,
-              blurRadius: 4,
-              offset: Offset(0, 2), // changes position of shadow
-            ),
-          ]),
+      decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(5.0), boxShadow: [
+        BoxShadow(
+          color: Colors.grey.withOpacity(0.5),
+          spreadRadius: 3,
+          blurRadius: 4,
+          offset: const Offset(0, 2), // changes position of shadow
+        ),
+      ]),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -268,10 +245,8 @@ Widget _customButton({
           ),
           Text(
             '$name',
-            style: TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
-                color: Colors.blueAccent),
+            style: const TextStyle(
+                fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.blueAccent),
           ),
         ],
       ),
@@ -280,10 +255,10 @@ Widget _customButton({
 }
 
 Widget buildImage(String urlImage, int index) => Container(
-      margin: EdgeInsets.symmetric(horizontal: 24),
+      margin: const EdgeInsets.symmetric(horizontal: 24),
       color: Colors.grey,
       child: Image.asset(
-        '${urlImage}',
+        urlImage,
         fit: BoxFit.cover,
       ),
     );

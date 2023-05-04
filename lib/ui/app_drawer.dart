@@ -1,7 +1,7 @@
-import 'package:bbpi/ui/newsPeed.dart';
+import 'package:bbpi/ui/news_peed.dart';
 import 'package:flutter/material.dart';
 
-import '../page/contactDevloper.dart';
+import '../page/contact_devloper.dart';
 
 class DrawerScreen extends StatefulWidget {
   const DrawerScreen({Key? key}) : super(key: key);
@@ -25,8 +25,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 Row(
                   children: <Widget>[
                     Padding(
-                      padding:
-                          const EdgeInsets.only(left: 15, bottom: 5, top: 5),
+                      padding: const EdgeInsets.only(left: 15, bottom: 5, top: 5),
                       child: SizedBox(
                         height: 100,
                         width: 100,
@@ -88,15 +87,12 @@ class _DrawerScreenState extends State<DrawerScreen> {
                       ),
                       title: const Text(
                         'News peed ',
-                        style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
+                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                       ),
                       iconColor: Colors.white54,
                       onTap: () {
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => NewsPeed()));
+                            context, MaterialPageRoute(builder: (context) => const NewsPeed()));
                       },
                     ),
                     ListTile(
@@ -107,8 +103,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                       ),
                       title: const Text(
                         'Profile',
-                        style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
+                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                       ),
                       iconColor: Colors.white54,
                       onTap: () {},
@@ -121,8 +116,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                       ),
                       title: const Text(
                         'About BBPI',
-                        style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
+                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                       ),
                       iconColor: Colors.white54,
                       onTap: () {},
@@ -135,15 +129,12 @@ class _DrawerScreenState extends State<DrawerScreen> {
                       ),
                       title: const Text(
                         'contact Devloper',
-                        style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
+                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                       ),
                       iconColor: Colors.white54,
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const ContactDevloper()));
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => const ContactDeveloper()));
                       },
                     ),
                     ListTile(
@@ -154,8 +145,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                       ),
                       title: const Text(
                         'Feedback',
-                        style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
+                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                       ),
                       iconColor: Colors.white54,
                       onTap: () {},
@@ -168,8 +158,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                       ),
                       title: const Text(
                         'Rating us',
-                        style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
+                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                       ),
                       iconColor: Colors.white54,
                       tileColor: Colors.white,
@@ -192,8 +181,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                       SizedBox(
                         width: 5,
                       ),
-                      Text('Log Out',
-                          style: TextStyle(color: Colors.white, fontSize: 18)),
+                      Text('Log Out', style: TextStyle(color: Colors.white, fontSize: 18)),
                     ],
                   ),
                 ),

@@ -6,7 +6,7 @@ class Teacher extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Teacher')),
+      appBar: AppBar(title: const Text('Teacher')),
     );
   }
 }

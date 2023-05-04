@@ -1,17 +1,18 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class Department extends StatefulWidget {
-  Department({Key? key}) : super(key: key);
+  const Department({Key? key}) : super(key: key);
 
   @override
   State<Department> createState() => _DepartmentState();
 }
 
 class _DepartmentState extends State<Department> {
+  String dropdownvalue = 'Item 1';
 
-  String dropdownvalue = 'Item 1';  
-
-   var items = [    
+  var items = [
     'Item 1',
     'Item 2',
     'Item 3',
@@ -22,18 +23,16 @@ class _DepartmentState extends State<Department> {
   Widget build(BuildContext context) {
     return Center(
       child: Scaffold(
-        appBar: AppBar(title: Text('Department')),
+        appBar: AppBar(title: const Text('Department')),
         body: Column(
-         
           children: [
             DropdownButton(
-                
               // Initial Value
               value: dropdownvalue,
-                
+
               // Down Arrow Icon
-              icon: const Icon(Icons.keyboard_arrow_down),    
-                
+              icon: const Icon(Icons.keyboard_arrow_down),
+
               // Array list of items
               items: items.map((String items) {
                 return DropdownMenuItem(
@@ -42,27 +41,19 @@ class _DepartmentState extends State<Department> {
                 );
               }).toList(),
 
-               onChanged: (String? newValue) { 
+              onChanged: (String? newValue) {
                 setState(() {
                   dropdownvalue = newValue!;
                 });
-                  },
+              },
             ),
-
-
-            DropdownButton(items: items.map(
-              (String items){
-                return DropdownMenuItem(
-                  value: items,
-                  child: Column()
-                  );
-              }
-            ).toList(),
-             onChanged: (String? newValue2){
-               setState(() {
-                 
-               });
-             })
+            DropdownButton(
+                items: items.map((String items) {
+                  return DropdownMenuItem(value: items, child: Column());
+                }).toList(),
+                onChanged: (String? newValue2) {
+                  setState(() {});
+                })
           ],
         ),
       ),

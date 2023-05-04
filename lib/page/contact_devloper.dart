@@ -3,20 +3,19 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ContactDevloper extends StatefulWidget {
-  const ContactDevloper({Key? key}) : super(key: key);
+class ContactDeveloper extends StatefulWidget {
+  const ContactDeveloper({Key? key}) : super(key: key);
 
   @override
-  State<ContactDevloper> createState() => _ContactDevloperState();
+  State<ContactDeveloper> createState() => _ContactDeveloperState();
 }
 
-class _ContactDevloperState extends State<ContactDevloper> {
+class _ContactDeveloperState extends State<ContactDeveloper> {
   String url_fb = 'https://facebook.com/codereyaminfb';
   String url_linkedin = 'https://linkedin.com/in/codereyamin';
   String url_twitter = 'https://twitter.com/codereyamin';
   String url_instagram = 'https://instagram.com/codereyamin';
-  String url_mail =
-      'mailto:codereyamin@gmail.com?subject=BBPI&body=BBPI%20plugin';
+  String url_mail = 'mailto:codereyamin@gmail.com?subject=BBPI&body=BBPI%20plugin';
   String url_phone = 'tel:+8801517822052';
   String url_sms = 'sms:01517822052';
 
@@ -70,29 +69,25 @@ class _ContactDevloperState extends State<ContactDevloper> {
                 Custombutton(
                   icon: const Icon(Icons.mail),
                   nameText: const Text('Contact To  Email',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold)),
+                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                   onClick: () => grtUrlLauncher(url_mail),
                 ),
                 Custombutton(
                   icon: const Icon(Icons.phone),
                   nameText: const Text('Contact To Phone Number',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold)),
+                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                   onClick: () => grtUrlLauncher(url_phone),
                 ),
                 Custombutton(
                   icon: const Icon(Icons.sms),
                   nameText: const Text('Contact To Sms',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold)),
+                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                   onClick: () => grtUrlLauncher(url_sms),
                 ),
                 Custombutton(
                   icon: const Icon(Icons.facebook),
                   nameText: const Text('Contact To Facebook',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold)),
+                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                   onClick: () => grtUrlLauncher(url_fb),
                 ),
                 Custombutton(
@@ -102,8 +97,7 @@ class _ContactDevloperState extends State<ContactDevloper> {
                     width: 24,
                   ),
                   nameText: const Text('Contact To LinkendIn',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold)),
+                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                   onClick: () => grtUrlLauncher(url_linkedin),
                 ),
                 Custombutton(
@@ -113,8 +107,7 @@ class _ContactDevloperState extends State<ContactDevloper> {
                     width: 24,
                   ),
                   nameText: const Text('Contact To Twitter',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold)),
+                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                   onClick: () => grtUrlLauncher(url_twitter),
                 ),
                 Custombutton(
@@ -124,8 +117,7 @@ class _ContactDevloperState extends State<ContactDevloper> {
                     width: 24,
                   ),
                   nameText: const Text('Contact To Instagram',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold)),
+                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                   onClick: () => grtUrlLauncher(url_instagram),
                 ),
                 Custombutton(
@@ -135,15 +127,13 @@ class _ContactDevloperState extends State<ContactDevloper> {
                     width: 24,
                   ),
                   nameText: const Text('Contact To Whatsapp',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold)),
+                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                   onClick: () => grtUrlLauncher(url_phone),
                 ),
                 Custombutton(
                   icon: const Icon(Icons.bug_report),
                   nameText: const Text('Send Me Bug Info',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold)),
+                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                   onClick: () => grtUrlLauncher(url_mail),
                 ),
                 const SizedBox(
@@ -159,11 +149,7 @@ class _ContactDevloperState extends State<ContactDevloper> {
 }
 
 class Custombutton extends StatelessWidget {
-  Custombutton(
-      {Key? key,
-      required this.icon,
-      required this.nameText,
-      required this.onClick})
+  Custombutton({Key? key, required this.icon, required this.nameText, required this.onClick})
       : super(key: key);
 
   VoidCallback onClick;
@@ -177,8 +163,7 @@ class Custombutton extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.all(10.0),
         padding: const EdgeInsets.all(12.0),
-        decoration: BoxDecoration(
-            color: Colors.blue, borderRadius: BorderRadius.circular(22.0)),
+        decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(22.0)),
         child: ListTile(
           title: nameText,
           trailing: CircleAvatar(

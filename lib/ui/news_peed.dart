@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class NewsPeed extends StatefulWidget {
-  NewsPeed({Key? key}) : super(key: key);
+  const NewsPeed({Key? key}) : super(key: key);
 
   @override
   State<NewsPeed> createState() => _NewsPeedState();
@@ -10,8 +10,8 @@ class NewsPeed extends StatefulWidget {
 class _NewsPeedState extends State<NewsPeed> {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: AppBar(title: Text('News Peed')),
+    return Scaffold(
+      appBar: AppBar(title: const Text('News Peed')),
     );
   }
 }

@@ -3,7 +3,7 @@
 import 'dart:io';
 
 import 'package:bbpi/page/aboutBbpi.dart';
-import 'package:bbpi/page/contactDevloper.dart';
+import 'package:bbpi/page/contact_devloper.dart';
 import 'package:bbpi/page/feedbackAndratting.dart';
 import 'package:bbpi/ui/profile.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +20,7 @@ class MenuScreen extends StatefulWidget {
 }
 
 class _MenuScreenState extends State<MenuScreen> {
-  bool isDrawrOpen = false;
+  bool isDrawerOpen = false;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -77,15 +77,12 @@ class _MenuScreenState extends State<MenuScreen> {
                         ),
                         title: const Text(
                           'News Feed',
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                         ),
                         iconColor: Colors.white54,
                         onTap: () {
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const NewsFeed()));
+                              context, MaterialPageRoute(builder: (context) => const NewsFeed()));
                           ZoomDrawer.of(context)!.close();
                         },
                       ),
@@ -97,15 +94,12 @@ class _MenuScreenState extends State<MenuScreen> {
                         ),
                         title: const Text(
                           'Profile',
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                         ),
                         iconColor: Colors.white54,
                         onTap: () {
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const PProfile()));
+                              context, MaterialPageRoute(builder: (context) => const PProfile()));
                           ZoomDrawer.of(context)!.close();
                         },
                       ),
@@ -117,15 +111,12 @@ class _MenuScreenState extends State<MenuScreen> {
                         ),
                         title: const Text(
                           'About BBPI',
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                         ),
                         iconColor: Colors.white54,
                         onTap: () {
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const AboutBbpi()));
+                              context, MaterialPageRoute(builder: (context) => const AboutBbpi()));
                           ZoomDrawer.of(context)!.close();
                         },
                       ),
@@ -137,16 +128,12 @@ class _MenuScreenState extends State<MenuScreen> {
                         ),
                         title: const Text(
                           'Contact Devloper',
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                         ),
                         iconColor: Colors.white54,
                         onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const ContactDevloper()));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => const ContactDeveloper()));
                           ZoomDrawer.of(context)!.close();
                         },
                       ),
@@ -158,33 +145,24 @@ class _MenuScreenState extends State<MenuScreen> {
                         ),
                         title: const Text(
                           'Feedback',
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                         ),
                         iconColor: Colors.white54,
                         onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const FeedbackAndRatting()));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => const FeedbackAndRatting()));
                         },
                       ),
                       ListTile(
-                        leading: const Icon(Icons.star,
-                            size: 40, color: Colors.white),
+                        leading: const Icon(Icons.star, size: 40, color: Colors.white),
                         title: const Text(
                           'Ratting us',
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                         ),
                         iconColor: Colors.white54,
                         onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const FeedbackAndRatting()));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => const FeedbackAndRatting()));
                         },
                       ),
                     ],
@@ -201,9 +179,7 @@ class _MenuScreenState extends State<MenuScreen> {
                           leading: const Icon(Icons.logout, size: 40),
                           title: const Text(
                             'Exit',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
+                            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                           ),
                           iconColor: Colors.white54,
                           onTap: () {
@@ -215,10 +191,8 @@ class _MenuScreenState extends State<MenuScreen> {
                                   content: const Text("You are Exit...."),
                                   actions: <Widget>[
                                     Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Padding(
                                           padding: const EdgeInsets.all(10.0),
@@ -243,9 +217,7 @@ class _MenuScreenState extends State<MenuScreen> {
                                               },
                                               child: const Text(
                                                 'Yes..',
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 20),
+                                                style: TextStyle(color: Colors.white, fontSize: 20),
                                               )),
                                         ),
                                         Padding(
@@ -256,9 +228,7 @@ class _MenuScreenState extends State<MenuScreen> {
                                               },
                                               child: const Text(
                                                 'No..',
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 22),
+                                                style: TextStyle(color: Colors.white, fontSize: 22),
                                               )),
                                         ),
                                       ],

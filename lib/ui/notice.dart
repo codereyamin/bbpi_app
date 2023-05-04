@@ -19,7 +19,7 @@ class _NoticeState extends State<Notice> {
           child: Material(
               color: Colors.grey.shade300,
               borderRadius: BorderRadius.circular(10),
-              animationDuration: Duration(milliseconds: 500),
+              animationDuration: const Duration(milliseconds: 500),
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Row(

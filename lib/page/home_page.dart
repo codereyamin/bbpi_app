@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
     Stack(
       children: const [DrawerScreen(), HomeScreen()],
     ),
-    Notis(),
+    const Notis(),
     const Search(),
     const Profile(),
   ];
@@ -41,21 +41,13 @@ class _HomePageState extends State<HomePage> {
           onTap: (index) => setState(() => currentIndex = index),
           items: const [
             BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: 'Home',
-                backgroundColor: Colors.blue),
+                icon: Icon(Icons.home), label: 'Home', backgroundColor: Colors.blue),
             BottomNavigationBarItem(
-                icon: Icon(Icons.notifications),
-                label: 'Notice',
-                backgroundColor: Colors.blue),
+                icon: Icon(Icons.notifications), label: 'Notice', backgroundColor: Colors.blue),
             BottomNavigationBarItem(
-                icon: Icon(Icons.search),
-                label: 'Search',
-                backgroundColor: Colors.blue),
+                icon: Icon(Icons.search), label: 'Search', backgroundColor: Colors.blue),
             BottomNavigationBarItem(
-                icon: Icon(Icons.account_circle),
-                label: 'Profile',
-                backgroundColor: Colors.blue),
+                icon: Icon(Icons.account_circle), label: 'Profile', backgroundColor: Colors.blue),
           ]),
     );
   }

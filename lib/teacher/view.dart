@@ -7,7 +7,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class TeacherDetailScring extends StatefulWidget {
   const TeacherDetailScring({Key? key}) : super(key: key);
-  static const String rooteNeme = '/teacherListDeatil';
+  static const String rooteName = '/teacherListDetails';
 
   @override
   State<TeacherDetailScring> createState() => _TeacherDetailScringState();
@@ -70,39 +70,33 @@ class _TeacherDetailScringState extends State<TeacherDetailScring> {
           children: [
             Padding(
               padding: const EdgeInsets.all(30.0),
-              child: SizedBox(
-                  width: 250, height: 250, child: Image.asset(teacherImg)),
+              child: SizedBox(width: 250, height: 250, child: Image.asset(teacherImg)),
             ),
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Text(teacherName,
                   style: const TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20)),
+                      color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20)),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 teacherPosition,
-                style: const TextStyle(
-                    color: Colors.blueGrey, fontWeight: FontWeight.bold),
+                style: const TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.bold),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 teacherEducation,
-                style: const TextStyle(
-                    color: Colors.blueGrey, fontWeight: FontWeight.bold),
+                style: const TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.bold),
               ),
             ),
             Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
                   onPressed: () => grtUrlLauncher(url_phone),
-                  style:
-                      ElevatedButton.styleFrom(backgroundColor: Colors.white),
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
                   child: Text(
                     teachernumber,
                     style: const TextStyle(fontSize: 18, color: Colors.black),

@@ -17,8 +17,7 @@ class _RattListviweState extends State<RattListviwe> {
   List<TeacherList> teacherList = [];
 
   Future readJsonFile() async {
-    final String response =
-        await rootBundle.loadString('assets/json/teacherList.json');
+    final String response = await rootBundle.loadString('assets/json/teacherList.json');
     final teacherData = await jsonDecode(response);
     var list = teacherData["rat"] as List<dynamic>;
     setState(() {
@@ -52,8 +51,7 @@ class _RattListviweState extends State<RattListviwe> {
                         title: Text(teacherList[index].name),
                         subtitle: Text(teacherList[index].education),
                         onTap: () {
-                          Navigator.of(context).pushNamed(
-                              TeacherDetailScring.rooteNeme,
+                          Navigator.of(context).pushNamed(TeacherDetailScring.rooteName,
                               arguments: jsonEncode(teacherList[index]));
                         },
                       ),

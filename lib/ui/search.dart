@@ -19,12 +19,12 @@ class _SearchState extends State<Search> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Material(
-                  textStyle: TextStyle(color: Colors.black87),
-                  color: Color.fromARGB(255, 214, 211, 206),
+                  textStyle: const TextStyle(color: Colors.black87),
+                  color: const Color.fromARGB(255, 214, 211, 206),
                   borderRadius: BorderRadius.circular(10),
                   child: TextFormField(
-                    style: TextStyle(color: Colors.black),
-                    decoration: InputDecoration(
+                    style: const TextStyle(color: Colors.black),
+                    decoration: const InputDecoration(
                         prefixIcon: Icon(Icons.search),
                         hintText: "Enter Search KeyWord",
                         border: InputBorder.none),

@@ -22,11 +22,10 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'bbpi',
-      home:
-          SafeArea(child: show ? const OnBoardingPage() : const Splashscreen()),
+      home: SafeArea(child: show ? const OnBoardingPage() : const Splashscreen()),
       routes: {
-        CmtListviwe.rooteNeme: (context) => const CmtListviwe(),
-        TeacherDetailScring.rooteNeme: (context) => const TeacherDetailScring(),
+        CmtListviwe.rooteName: (context) => const CmtListviwe(),
+        TeacherDetailScring.rooteName: (context) => const TeacherDetailScring(),
       },
     );
   }
