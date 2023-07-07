@@ -18,8 +18,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int currentIndex = 0;
   final Screen = [
-    Stack(
-      children: const [DrawerScreen(), HomeScreen()],
+    const Stack(
+      children: [DrawerScreen(), HomeScreen()],
     ),
     const Notis(),
     const Search(),

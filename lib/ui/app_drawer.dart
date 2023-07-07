@@ -22,17 +22,17 @@ class _DrawerScreenState extends State<DrawerScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                Row(
+                const Row(
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.only(left: 15, bottom: 5, top: 5),
+                      padding: EdgeInsets.only(left: 15, bottom: 5, top: 5),
                       child: SizedBox(
                         height: 100,
                         width: 100,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
-                          children: const [
+                          children: [
                             CircleAvatar(
                               radius: 50,
                               backgroundColor: Colors.transparent,
@@ -49,12 +49,12 @@ class _DrawerScreenState extends State<DrawerScreen> {
                         ),
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 15,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           "Tuhin Ikbal Eyamin",
                           style: TextStyle(color: Colors.white),
@@ -166,10 +166,10 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     ),
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 30),
+                const Padding(
+                  padding: EdgeInsets.only(top: 30),
                   child: Row(
-                    children: const [
+                    children: [
                       SizedBox(
                         width: 10,
                       ),

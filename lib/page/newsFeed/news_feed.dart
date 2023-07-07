@@ -29,10 +29,10 @@ class NewsFeed extends StatelessWidget {
                         const SizedBox(
                           width: 10,
                         ),
-                        Expanded(
+                        const Expanded(
                             child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text(
                               "Sample Title News feed ",
                               style: TextStyle(
@@ -53,8 +53,7 @@ class NewsFeed extends StatelessWidget {
                           ],
                         )),
                         IconButton(
-                            onPressed: () {},
-                            icon: const Icon(Icons.arrow_forward_ios_rounded))
+                            onPressed: () {}, icon: const Icon(Icons.arrow_forward_ios_rounded))
                       ],
                     ),
                   )),

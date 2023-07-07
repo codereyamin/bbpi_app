@@ -30,19 +30,19 @@ class _MenuScreenState extends State<MenuScreen> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(15.0),
+              const Padding(
+                padding: EdgeInsets.all(15.0),
                 child: Row(children: [
-                  const CircleAvatar(
+                  CircleAvatar(
                     backgroundImage: AssetImage('assets/about.png'),
                     maxRadius: 35,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 15),
+                    padding: EdgeInsets.only(left: 15),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'Tuhin Ikbal Eyamin',
                           style: TextStyle(fontWeight: FontWeight.bold),

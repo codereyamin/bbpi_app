@@ -15,8 +15,8 @@ class _TermsAndConditionState extends State<TermsAndCondition> {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(title: const Text('title')),
-      body: Column(
-        children: const [Text(' i will add next update')],
+      body: const Column(
+        children: [Text(' i will add next update')],
       ),
     ));
   }

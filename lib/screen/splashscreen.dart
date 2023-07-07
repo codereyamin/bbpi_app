@@ -15,8 +15,8 @@ class _SplashscreenState extends State<Splashscreen> {
   void initState() {
     Timer(
         const Duration(seconds: 5),
-        () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const CustomDrawer())));
+        () => Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => const CustomDrawer())));
     super.initState();
   }
 
@@ -37,12 +37,12 @@ class _SplashscreenState extends State<Splashscreen> {
                 fit: BoxFit.contain,
               ),
             ),
-            SafeArea(
+            const SafeArea(
               child: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: const [
+                  children: [
                     Text(
                       'WelCome To',
                       style: TextStyle(

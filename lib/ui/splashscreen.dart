@@ -17,8 +17,8 @@ class _SplashscreenState extends State<Splashscreen> {
   void initState() {
     Timer(
         const Duration(seconds: 3),
-        () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const HomePage())));
+        () => Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => const HomePage())));
     super.initState();
   }
 
@@ -39,18 +39,16 @@ class _SplashscreenState extends State<Splashscreen> {
                 fit: BoxFit.contain,
               ),
             ),
-            SafeArea(
+            const SafeArea(
               child: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: const [
+                  children: [
                     Text(
                       'WelCome To',
                       style: TextStyle(
-                          fontSize: 44.0,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.blue),
+                          fontSize: 44.0, fontWeight: FontWeight.bold, color: Colors.blue),
                     ),
                     SizedBox(
                       height: 20.0,
@@ -58,19 +56,15 @@ class _SplashscreenState extends State<Splashscreen> {
                     Text(
                       'Brahmanbaria',
                       style: TextStyle(
-                          fontSize: 35.0,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.blue),
+                          fontSize: 35.0, fontWeight: FontWeight.bold, color: Colors.blue),
                     ),
                     SizedBox(
                       height: 20.0,
                     ),
                     Text(
-                      'Polytechnic Institue',
+                      'Polytechnic Institute',
                       style: TextStyle(
-                          fontSize: 30.0,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.blue),
+                          fontSize: 30.0, fontWeight: FontWeight.bold, color: Colors.blue),
                     ),
                     SizedBox(
                       height: 20.0,

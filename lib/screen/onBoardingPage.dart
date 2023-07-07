@@ -31,8 +31,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
           ),
           PageViewModel(
             title: 'Software Feature',
-            body:
-                'Institute Information,Booklist,Web,Blood Collection,Notice etc ',
+            body: 'Institute Information,Booklists,Web,Blood Collection,Notice etc ',
             image: buildImage('assets/feature.png'),
             decoration: getPageDecoration(),
           ),
@@ -40,11 +39,11 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
             title: 'Help Center',
             body:
                 '', //'Staying with classmates,Texting,Making New Classmates And Sharing Information With Them',
-            footer: Center(
+            footer: const Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Padding(
                     padding: EdgeInsets.only(bottom: 5),
                     child: Text('* Staying with classmates',
@@ -52,8 +51,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   ),
                   Padding(
                     padding: EdgeInsets.only(bottom: 5),
-                    child: Text('* Texting',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
+                    child: Text('* Texting', style: TextStyle(fontWeight: FontWeight.bold)),
                   ),
                   Padding(
                     padding: EdgeInsets.only(bottom: 5),
@@ -104,11 +102,8 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                         ),
                         TextButton(
                           onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const TermsAndCondition()));
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) => const TermsAndCondition()));
                           },
                           child: const Padding(
                             padding: EdgeInsets.all(20.0),
@@ -166,8 +161,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
       );
 
   PageDecoration getPageDecoration() => PageDecoration(
-        titleTextStyle:
-            const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+        titleTextStyle: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
         bodyTextStyle: const TextStyle(fontSize: 20),
         bodyPadding: const EdgeInsets.all(18).copyWith(bottom: 0),
         imagePadding: const EdgeInsets.all(24),
@@ -177,8 +171,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
 //last page condition
 
   PageDecoration getCondiPageDecoration() => PageDecoration(
-        titleTextStyle:
-            const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+        titleTextStyle: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
         titlePadding: const EdgeInsets.all(0),
         bodyTextStyle: const TextStyle(fontSize: 1),
         bodyPadding: const EdgeInsets.all(0).copyWith(bottom: 0),
@@ -193,7 +186,6 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
   void ondone(context) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('ON_BOAEDING', false);
-    await Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => LoginPage()));
+    await Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginPage()));
   }
 }
